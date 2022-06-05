@@ -40,8 +40,9 @@ echo "--------------------------------"
 echo "Relational operators"
 echo "-eq -ne -gt -lt -ge -le"
 echo "--------------------------------"
-a=20
-b=25
+
+a=30
+b=50
 
 if [ ${a} -eq ${b} ]; then
     echo "a -eq b : a 等于 b"
@@ -86,23 +87,19 @@ echo "------------------------------------------------------"
 a=10
 b=20
 
-if [ ${a} -lt ${b} -a ${a} -gt 5 ];then
+if [ ${a} -lt ${b} -a ${a} -gt 40 ];then
     echo "${a} 小于 ${b} 且 ${a} 大于 5 : 返回 true"
 else
     echo "${a} 小于 ${b} 且 ${a} 大于 5 : 返回 false"
 fi
 
-if [ ${a} -gt ${b} -o ${b} -ge 15 ];then
-    echo "${a} 大于 ${b} 或 ${b} 大于等于 15 : 返回 true"
+if [ ${a} -lt ${b} -o ${a} -gt 40 ];then
+    echo "${a} 小于 ${b} 或 ${a} 小于 40 : 返回true"
 else
-    echo "${a} 大于 ${b} 或 ${b} 大于等于 15 : 返回 false"
+    echo "${a} 小于 ${b} 或 ${a} 小于 40 : 返回false"
 fi
 
-if [ ${a} -gt ${b} -o ${a} -lt 5 ];then
-    echo "${a} 小于 ${b} 或 ${a} 小于 5 : 返回true"
-else
-    echo "${a} 小于 ${b} 或 ${a} 小于 5 : 返回false"
-fi
+
 echo "--------------------------------------------------------"
 
 echo "Logic operators"
@@ -153,7 +150,7 @@ else
     echo "-n ${a} : 字符串长度为 0"
 fi
 
-if [ $a ];then
+if [ ${a} ];then
     echo "$a : 字符串不为空"
 else
     echo "$a : 字符串为空"
