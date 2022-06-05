@@ -24,7 +24,7 @@ function fun_With_Return()
     echo "输入第二个数字: "
     read num2
     echo "两个数字分别为 ${num1} 和 ${num2}"
-    return $((${num1} \* ${num2}))
+    return $((${num1} * ${num2}))
 }
 fun_With_Return
 echo "两个数字的乘积为 $? !"
